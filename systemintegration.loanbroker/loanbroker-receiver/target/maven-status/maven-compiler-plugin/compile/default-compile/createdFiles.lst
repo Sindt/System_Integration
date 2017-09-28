@@ -1,0 +1,3 @@
+loanbroker\receiver\boundary\QuoteRequestResource.class
+loanbroker\receiver\controller\QouteRequestController.class
+loanbroker\receiver\JAXRSConfig.class

@@ -1,0 +1,3 @@
+loanbroker\endpoint\EndPoint.class
+loanbroker\endpoint\Producer.class
+loanbroker\endpoint\Consumer.class
