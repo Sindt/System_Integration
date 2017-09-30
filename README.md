@@ -13,7 +13,7 @@ Projektet består blot af en pom.xml fil og et bash script. Pom filen håndtere 
 3. Modules
 
 <br>
-Bash scriptet bruges til at bygge hoved-modulet og alle under modulerne. (Når dette script har kørt, bliver der genereret en "Über jar" under mappen *systemintegration.loanbroker\loanbroker-receiver\target*. Ved eksekvering af denne, opstartes en Payara micro server, hvor alle moduler er deployet og kan tilgåes på localhost:8080.  
+Bash scriptet bruges til at bygge hoved-modulet og alle under modulerne. (Når dette script har kørt, bliver der genereret en "Über jar" under mappen *systemintegration.loanbroker\loanbroker-receiver\target*. Ved eksekvering af denne, opstartes en Payara micro server lokalt, hvor alle moduler er deployet og kan tilgåes på localhost:8080.  
 
 
 ### systemintegration.endpoint
