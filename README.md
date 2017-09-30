@@ -3,12 +3,14 @@
 ## Beskrivelse af de forskellige moduler:
 
 ### systemintegration.loanbroker
-Dette modul kan betegnes som hoved-modulet, i maven kaldt "Parent projekt". Formålet med dette er at vi kan samle de dependencies (afhægigheder), som bruges af alle moduler, ét sted og dermed undgå, at hvert enkelt modul skal hente hente de samme jar filer. Vi kan på denne måde styre vores systems dependencies centralt, så hvis vi ønsker at bruge en anden version af en bestemt dependency, skal det kun ændres ét sted. 
+Dette modul kan betegnes som hoved-modulet, i maven kaldt "Parent projekt". Formålet med dette er at vi kan samle de dependencies (afhægigheder), som bruges af alle moduler, ét sted og dermed undgå, at hvert enkelt modul skal hente hente de samme jar filer. Vi kan på denne måde styre vores systems dependencies centralt, så hvis vi ønsker at bruge en anden version af en bestemt dependency, skal det kun ændres ét sted. Hvert modul har dog stadig sin egen pom.xml, hvilket gør det muligt at hente modul specifikke dependencies til det projekt, hvis det er nødvendigt.  
 <br>
 En anden fordel ved at have et hoved-modul, er at vi blot behøver at kører vores "build" kommando én gang, og så sørger maven for at bygge det ene projekt, samt **alle** under modulerne. *INDSÆT sreen dump* 
-<br>
+<br><br>
 Projektet består blot af en pom.xml fil, som håndtere blandt andet:
-1. Properties - 
+1. Properties
+2. Dependencies
+3. Modules
 
 
 
