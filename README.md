@@ -2,7 +2,7 @@
 
 ### Beskrivelse af de forskellige moduler:
 
-** systemintegration.loanbroker **
+**systemintegration.loanbroker**
 Dette modul kan betegnes som hoved modulet, i maven kaldt "Parent projekt". 
 
 
