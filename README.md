@@ -17,7 +17,7 @@ Bash scriptet bruges til at bygge hoved-modulet og alle under modulerne. (Når d
 
 
 ### systemintegration.endpoint
-Modulet er tiltænkt at fungere som en form for klient til de steder i vores system, som har behov for at bruge RabbitMQ køerne. Formålet med dette modul er at, hvis du enten er "producer" eller "consumer" er koden for at forbinde til en kø deb samme, og derfor kan vi generalisere det i denne klasse. 
+Modulet er tiltænkt at fungere som en form for klient til de steder i vores system, som har behov for at bruge RabbitMQ køerne. Formålet med dette modul er at, hvis du enten er "producer" eller "consumer" er koden for at forbinde til en kø den samme, og derfor kan vi generalisere det i denne klasse. 
 <br><br>
 Modulet indeholder tre klasser:
 1. Endpoint - Er selve kø'en og forbindelsen til denne
