@@ -7,14 +7,22 @@ Dette modul kan betegnes som hoved-modulet, i maven kaldt "Parent projekt". Form
 <br>
 En anden fordel ved at have et hoved-modul, er at vi blot behøver at kører vores "build" kommando én gang, og så sørger maven for at bygge det ene projekt, samt **alle** under modulerne. *INDSÆT sreen dump* 
 <br><br>
-Projektet består blot af en pom.xml fil, som håndtere blandt andet:
+Projektet består blot af en pom.xml fil og et bash script. Pom filen håndtere blandt andet:
 1. Properties
 2. Dependencies
 3. Modules
 
+<br>
+Bash scriptet bruges til at bygge hoved-modulet og alle under modulerne. (Når dette script har kørt, bliver der genereret en "Über jar" under mappen *systemintegration.loanbroker\loanbroker-receiver\target*. Ved eksekvering af denne, opstartes en Payara micro server, hvor alle moduler er deployet og kan tilgåes på localhost:8080.  
 
 
-Om du er en producent eller en forbruger, er koden for at forbinde til en kø det samme, derfor kan vi generalisere det i denne klasse.
+### systemintegration.endpoint
+Modulet er tiltænkt at fungere som en form for klient til de steder i vores system, som har behov for at bruge RabbitMQ køerne. Formålet med dette modul er at, hvis du enten er "producer" eller "consumer" er koden for at forbinde til en kø deb samme, og derfor kan vi generalisere det i denne klasse. 
+<br><br>
+Modulet indeholder tre klasser:
+1. Endpoint - Er selve kø'en og forbindelsen til denne
+2. Producer
+3. Consumer
 
 
 ## Ordliste:
