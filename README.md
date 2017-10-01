@@ -21,8 +21,11 @@ Modulet er tiltænkt at fungere som en form for klient til de steder i vores sys
 <br><br>
 Modulet indeholder tre klasser:
 1. Endpoint - Er selve kø'en og forbindelsen til denne
-2. Producer
-3. Consumer
+2. Producer - Er klassen som bruges for at tilføje beskeder på kø'en
+3. Consumer - Er klassen som bruges til at læse fra køen
+
+### systemintegration.receiver
+Modulet er loanbroker systemets modtager modul, som har til formål at modtage request's fra klienten. Receiveren sørger for at sende de modtagne request fra klienten til besked systemets kø.  
 
 
 ## Ordliste:
