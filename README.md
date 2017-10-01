@@ -25,7 +25,9 @@ Modulet indeholder tre klasser:
 3. Consumer - Er klassen som bruges til at læse fra køen
 
 ### systemintegration.receiver
-Modulet er loanbroker systemets modtager modul, som har til formål at modtage request's fra klienten. Receiveren sørger for at sende de modtagne request fra klienten til besked systemets kø.  
+Modulet er loanbroker systemets modtager modul, som har til formål at modtage request's fra klienten. Receiveren sørger for at sende de modtagne request fra klienten til besked systemets kø.
+<br>
+Klasen importere endpoint modulet, som receiveren bruger til at initializere en ny instans af producer klassen, og derefter sender den et byte [] til produceren's sendMessageBasic() metode.
 
 
 ## Ordliste:
