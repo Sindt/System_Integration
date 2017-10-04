@@ -13,11 +13,16 @@ public abstract class EndPoint {
 	protected String endPointName;
 	protected Connection connection;
 
-	public EndPoint(String endpointName, ConnectionFactory factory) throws IOException {
+	public EndPoint(String endpointName) throws IOException {
 		this.endPointName = endpointName;
 
 		try {
-			connection = factory.newConnection();
+			ConnectionFactory connfac = new ConnectionFactory();
+			connfac.setHost("datdb.cphbusiness.dk");
+			connfac.setPort(5672);
+			connfac.setUsername("student");
+			connfac.setPassword("cph");
+			connection = connfac.newConnection();
 			channel = connection.createChannel();
 			channel.queueDeclare(endpointName, false, false, false, null);
 

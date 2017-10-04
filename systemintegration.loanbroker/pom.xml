@@ -21,12 +21,19 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.json</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>com.rabbitmq</groupId>
 			<artifactId>amqp-client</artifactId>
 			<version>4.0.1</version>
 		</dependency>
-		
-		
+
+
 		<!-- TEST Dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -48,7 +55,8 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>loanbroker-receiver</module>
 		<module>loanbroker-endpoint</module>
+		<module>loanbroker-enricher-credit</module>
+		<module>loanbroker-receiver</module>
 	</modules>
 </project>

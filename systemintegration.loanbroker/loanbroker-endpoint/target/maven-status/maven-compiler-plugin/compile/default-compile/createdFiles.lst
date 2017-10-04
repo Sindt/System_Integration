@@ -1,3 +1,4 @@
-loanbroker\endpoint\EndPoint.class
 loanbroker\endpoint\Producer.class
 loanbroker\endpoint\Consumer.class
+loanbroker\endpoint\Consumer$1.class
+loanbroker\endpoint\EndPoint.class
