@@ -10,7 +10,7 @@ Projektet er meget nemt at demo. Nedenfor er en kort vejledning i de forskellige
 
 **For at stoppe serveren igen, findes Java Platform SE Binary, under windows processer, og jobbet afsluttes.** 
 
-### REST-API
+#### REST-API
 Projektet har et rest api som kan findes her:
 <br>
 http://localhost:8080/loanbroker-receiver/api/quote
@@ -20,12 +20,15 @@ http://localhost:8080/loanbroker-receiver/api/quote
 http://localhost:8080/loanbroker-receiver/api/quote/send/?ssn=1011902277&amount=120000&duration=5
 
 
-### RabbitMQ
+#### RabbitMQ
 Indtil videre bruger projektet følgende kø i RabbitMq.
 <br>
 http://datdb.cphbusiness.dk:15672/#/queues/%2F/Test
 <br>
 <p>Det er her beskeder bliver oprettet når man kalder REST servicen's POST metode, og det er den samme kø som bliver brugt af loanbroker.enricher til at hente beskeder.</p>
+
+
+#### Yderligere beskrivelse af setup kommer...
 
 
 ## Beskrivelse af de forskellige moduler:
