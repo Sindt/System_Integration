@@ -1,4 +1,32 @@
 # Loan Broker
+## How to Demo:
+
+Projektet er meget nemt at demo. Nedenfor er en kort vejledning i de forskellige steps:
+1. Clone projektet
+2. Kør build_deploy.sh
+3. Kør loanbroker.jar
+
+<p>Projektet er nu kørende lokalt på en Payara Micro server. Alle moduler er blevet deployet, og web-serveren kan findes på "http://localhost:8080"</p>
+
+**For at stoppe serveren igen, findes Java Platform SE Binary, under windows processer, og aflsutter jobbet** 
+
+### REST-API
+Projektet har et rest api som kan findes her:
+<br>
+http://localhost:8080/loanbroker-receiver/api/quote
+
+Ønsker man at POST'e en ny besked til Api'et kan det gøres via f.eks. Postman:
+<br>
+http://localhost:8080/loanbroker-receiver/api/quote/send/?ssn=1011902277&amount=120000&duration=5
+
+
+### RabbitMQ
+Indtil videre bruger projektet følgende kø i RabbitMq.
+<br>
+http://datdb.cphbusiness.dk:15672/#/queues/%2F/Test
+<br>
+<p>Det er her beskeder bliver oprettet når man kalder REST servicen's POST metode, og det er den samme kø som bliver brugt af loanbroker.enricher til at hente beskeder.</p>
+
 
 ## Beskrivelse af de forskellige moduler:
 
