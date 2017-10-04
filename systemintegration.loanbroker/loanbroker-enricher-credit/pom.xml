@@ -1,12 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>systemintegration.loanbroker</groupId>
-    <artifactId>loanbroker</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>loanbroker-enricher-credit</artifactId>
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>systemintegration.loanbroker</groupId>
+		<artifactId>loanbroker</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>loanbroker-enricher-credit</artifactId>
+	<dependencies>
 		<dependency>
 			<groupId>systemintegration.loanbroker</groupId>
 			<artifactId>loanbroker-endpoint</artifactId>
@@ -14,7 +15,15 @@
 			<classifier>classes</classifier>
 			<scope>compile</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
+		<dependency>
+			<groupId>org.apache.axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
+		</dependency>
+
 	</dependencies>
-  
-  <packaging>war</packaging>
+
+	<packaging>war</packaging>
 </project>

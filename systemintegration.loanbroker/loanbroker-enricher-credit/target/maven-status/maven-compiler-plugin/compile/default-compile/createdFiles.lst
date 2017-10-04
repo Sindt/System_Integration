@@ -1,2 +1,8 @@
-loanbroker\enricher\boundary\CreditReceiver.class
-loanbroker\enricher\controller\CreditService.class
+loanbroker\enricher\credit\boundary\CreditReceiver.class
+org\bank\credit\web\service\CreditScoreService_ServiceLocator.class
+loanbroker\enricher\credit\client\CreditClient.class
+org\bank\credit\web\service\CreditScoreServiceProxy.class
+org\bank\credit\web\service\CreditScoreServicePortBindingStub.class
+org\bank\credit\web\service\CreditScoreService_PortType.class
+org\bank\credit\web\service\CreditScoreService_Service.class
+loanbroker\enricher\credit\controller\CreditService.class

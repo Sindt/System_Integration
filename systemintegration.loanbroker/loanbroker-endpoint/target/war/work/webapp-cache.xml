@@ -8,7 +8,7 @@
           <string>WEB-INF/classes/loanbroker/endpoint/Consumer.class</string>
           <string>WEB-INF/classes/loanbroker/endpoint/EndPoint.class</string>
           <string>WEB-INF/classes/loanbroker/endpoint/Producer.class</string>
-          <string>WEB-INF/lib/javax.json-1.1.jar</string>
+          <string>WEB-INF/lib/json-20160810.jar</string>
           <string>WEB-INF/lib/amqp-client-4.0.1.jar</string>
           <string>WEB-INF/lib/slf4j-api-1.7.21.jar</string>
         </pathsSet>
@@ -74,9 +74,9 @@
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
-        <groupId>org.glassfish</groupId>
-        <artifactId>javax.json</artifactId>
-        <version>1.1</version>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20160810</version>
         <type>jar</type>
         <scope>compile</scope>
         <exclusions/>
@@ -84,7 +84,7 @@
           <entry>
             <string></string>
             <org.apache.maven.model.InputLocation>
-              <lineNumber>23</lineNumber>
+              <lineNumber>24</lineNumber>
               <columnNumber>15</columnNumber>
               <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
             </org.apache.maven.model.InputLocation>
@@ -92,7 +92,7 @@
           <entry>
             <string>groupId</string>
             <org.apache.maven.model.InputLocation>
-              <lineNumber>24</lineNumber>
+              <lineNumber>25</lineNumber>
               <columnNumber>13</columnNumber>
               <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
             </org.apache.maven.model.InputLocation>
@@ -100,7 +100,7 @@
           <entry>
             <string>artifactId</string>
             <org.apache.maven.model.InputLocation>
-              <lineNumber>25</lineNumber>
+              <lineNumber>26</lineNumber>
               <columnNumber>16</columnNumber>
               <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
             </org.apache.maven.model.InputLocation>
@@ -108,15 +108,15 @@
           <entry>
             <string>version</string>
             <org.apache.maven.model.InputLocation>
-              <lineNumber>26</lineNumber>
+              <lineNumber>27</lineNumber>
               <columnNumber>13</columnNumber>
               <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
             </org.apache.maven.model.InputLocation>
           </entry>
         </locations>
-        <managementKey>org.glassfish:javax.json:jar</managementKey>
+        <managementKey>org.json:json:jar</managementKey>
       </dependency>
-      <targetFileName>javax.json-1.1.jar</targetFileName>
+      <targetFileName>json-20160810.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
