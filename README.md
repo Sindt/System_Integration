@@ -21,11 +21,15 @@ http://localhost:8080/loanbroker-receiver/api/quote/send/?ssn=101190-2277&amount
 
 
 #### RabbitMQ
-Indtil videre bruger projektet følgende kø i RabbitMq.
+Indtil videre bruger projektet følgende køer i RabbitMq.
 <br>
-http://datdb.cphbusiness.dk:15672/#/queues/%2F/Test
-<br>
+http://datdb.cphbusiness.dk:15672/#/queues/%2F/kkc-receiver
 <p>Det er her beskeder bliver oprettet når man kalder REST servicen's POST metode, og det er den samme kø som bliver brugt af loanbroker.enricher til at hente beskeder.</p>
+<br>
+http://datdb.cphbusiness.dk:15672/#/queues/%2F/kkc-enricher-credit
+<br>
+<p>Denne kø som bliver brugt af loanbroker.enricher til at hente sende de berigede beskeder videre.</p>
+
 
 
 #### Yderligere beskrivelse af setup kommer...
