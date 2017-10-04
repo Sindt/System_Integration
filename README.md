@@ -17,7 +17,7 @@ http://localhost:8080/loanbroker-receiver/api/quote
 
 Ønsker man at POST'e en ny besked til Api'et kan det gøres via f.eks. Postman:
 <br>
-http://localhost:8080/loanbroker-receiver/api/quote/send/?ssn=1011902277&amount=120000&duration=5
+http://localhost:8080/loanbroker-receiver/api/quote/send/?ssn=101190-2277&amount=120000&duration=5
 
 
 #### RabbitMQ
