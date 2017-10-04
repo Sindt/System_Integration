@@ -8,7 +8,7 @@ Projektet er meget nemt at demo. Nedenfor er en kort vejledning i de forskellige
 
 <p>Projektet er nu kørende lokalt på en Payara Micro server. Alle moduler er blevet deployet, og web-serveren kan findes på "http://localhost:8080"</p>
 
-**For at stoppe serveren igen, findes Java Platform SE Binary, under windows processer, og aflsutter jobbet** 
+**For at stoppe serveren igen, findes Java Platform SE Binary, under windows processer, og jobbet afsluttes.** 
 
 ### REST-API
 Projektet har et rest api som kan findes her:
