@@ -1,0 +1,3 @@
+loanbroker\enricher\bank\client\BankClient.class
+loanbroker\enricher\bank\controller\BankService.class
+loanbroker\enricher\bank\boundary\MessageReceiver.class

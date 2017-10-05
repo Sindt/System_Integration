@@ -30,8 +30,8 @@ public class QouteRequestController {
 		try {
 			byte[] message = input.toString().getBytes();
 			producer.sendMessageBasic(message);
-
 			return Response.status(Status.OK).entity(message);
+			
 		} catch (Exception e) {
 			JSONObject json = new JSONObject().put("error", e.getMessage());
 			return Response.status(Status.INTERNAL_SERVER_ERROR).entity(json);

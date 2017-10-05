@@ -6,7 +6,7 @@
 		<artifactId>loanbroker</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>loanbroker-enricher-credit</artifactId>
+	<artifactId>loanbroker-enricher-bank</artifactId>
 	<packaging>war</packaging>
 	<dependencies>
 		<dependency>
@@ -25,4 +25,5 @@
 		</dependency>
 
 	</dependencies>
+
 </project>

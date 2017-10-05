@@ -13,10 +13,6 @@ public class CreditService {
 	private Producer producer;
 
 	public CreditService() {
-		init();
-	}
-
-	public void init() {
 		try {
 			producer = new Producer(EXCHANGE_NAME);
 			client = new CreditClient();

@@ -30,11 +30,9 @@ public class Consumer extends EndPoint implements Runnable {
 	@Override
 	public void run() {
 		try {
-			System.out.println("Running...");
 			channel.basicConsume(endPointName, autoAck, consumerTag, handler(channel));
 			while (true) {
 				if (Thread.interrupted()) {
-					System.out.println("closing");
 					return;
 				}
 			}
@@ -50,15 +48,12 @@ public class Consumer extends EndPoint implements Runnable {
 			@Override
 			public void handleDelivery(String consumerTag, Envelope envelope, BasicProperties properties, byte[] body)
 					throws IOException {
-				System.out.println("Message modtaget..");
 				message = body;
 
 				while (message != null) {
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
 					} finally {
 						if (!autoAck) {
 							channel.basicAck(envelope.getDeliveryTag(), false);
