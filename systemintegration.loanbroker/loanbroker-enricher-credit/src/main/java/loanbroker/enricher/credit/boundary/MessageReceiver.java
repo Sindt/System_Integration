@@ -27,7 +27,6 @@ public class MessageReceiver {
 			onMessage();
 		} catch (IOException e) {
 		}
-
 	}
 
 	public void onMessage() {
@@ -39,17 +38,15 @@ public class MessageReceiver {
 			while (consumerThread.isAlive()) {
 				byte[] message = consumer.getMessage();
 				if (message != null) {
-					serivce.enrichMessage(message);
-					consumer.setMessage(null);
+					if (serivce.enrichMessage(message)) {
+						consumer.setMessage(null);
+					}
 				}
+				Thread.sleep(500);
 				// Waits 1 sec before checking for new message
-				Thread.sleep(1000);
 			}
 		} catch (Exception e) {
-		} finally {
-			consumerThread.interrupt();
 		}
-
 	}
 
 }

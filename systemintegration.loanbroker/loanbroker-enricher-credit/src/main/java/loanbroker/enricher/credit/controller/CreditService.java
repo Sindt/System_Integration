@@ -31,16 +31,10 @@ public class CreditService {
 					producer.sendMessageBasic(message.toString().getBytes());
 					return true;
 				} catch (Exception e) {
-				} finally {
-					try {
-						producer.close();
-					} catch (Exception e) {
-					}
 				}
 			}
 		}
 		return false;
-
 	}
 
 	public JSONObject transformBytesToJson(byte[] body) {
