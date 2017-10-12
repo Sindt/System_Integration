@@ -13,21 +13,20 @@ import loanbroker.enricher.bank.controller.BankService;
 @Singleton
 public class MessageReceiver {
 
-	private static final String EXCHANGE_NAME = "kkc-enricher-credit";
+	private static final String EXCHANGE_NAME = "kkc-enricher-creditscore";
 	private static final String CONSUMER_TAG = "Bank";
 
-	private BankService serivce;
+	private BankService service;
 	private Consumer consumer;
 
 	@PostConstruct
 	public void init() {
 		try {
-			serivce = new BankService();
+			service = new BankService();
 			consumer = new Consumer(EXCHANGE_NAME, CONSUMER_TAG, false);
 			onMessage();
 		} catch (IOException e) {
 		}
-
 	}
 
 	public void onMessage() {
@@ -35,20 +34,20 @@ public class MessageReceiver {
 		try {
 			consumerThread = new Thread(consumer);
 			consumerThread.start();
-
-			while (consumerThread.isAlive()) {
-				byte[] message = consumer.getMessage();
-				if (message != null) {
-					serivce.enrichMessage(message);
-					consumer.setMessage(null);
+			while (true) {
+				synchronized (consumer) {
+					System.out.println("Waiting.. bank");
+					consumer.wait();
+					System.out.println("Modtaget bank");
+					byte[] message = consumer.getMessage();
+					if (service.enrichMessage(message)) {
+						consumer.setMessage(null);
+						continue;
+					}
 				}
-				// Waits 1 sec before checking for new message
-				Thread.sleep(1000);
 			}
 		} catch (Exception e) {
-		} finally {
-			consumerThread.interrupt();
+			e.printStackTrace();
 		}
-
 	}
 }

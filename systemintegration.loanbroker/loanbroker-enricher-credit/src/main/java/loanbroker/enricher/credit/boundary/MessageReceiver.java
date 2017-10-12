@@ -16,16 +16,17 @@ public class MessageReceiver {
 	private static final String EXCHANGE_NAME = "kkc-receiver";
 	private static final String CONSUMER_TAG = "Credit";
 
-	private CreditService serivce;
+	private CreditService service;
 	private Consumer consumer;
 
 	@PostConstruct
 	public void init() {
 		try {
-			serivce = new CreditService();
+			service = new CreditService();
 			consumer = new Consumer(EXCHANGE_NAME, CONSUMER_TAG, false);
 			onMessage();
 		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -34,19 +35,18 @@ public class MessageReceiver {
 		try {
 			consumerThread = new Thread(consumer);
 			consumerThread.start();
-
-			while (consumerThread.isAlive()) {
-				byte[] message = consumer.getMessage();
-				if (message != null) {
-					if (serivce.enrichMessage(message)) {
+			while (true) {
+				synchronized (consumer) {
+					System.out.println("Waiting.. creditscore");
+					consumer.wait();
+					byte[] message = consumer.getMessage();
+					if (service.enrichMessage(message)) {
 						consumer.setMessage(null);
+						continue;
 					}
 				}
-				Thread.sleep(500);
-				// Waits 1 sec before checking for new message
 			}
 		} catch (Exception e) {
 		}
 	}
-
 }

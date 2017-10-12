@@ -32,6 +32,28 @@
 			<version>4.0.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-discovery/commons-discovery -->
+		<dependency>
+			<groupId>commons-discovery</groupId>
+			<artifactId>commons-discovery</artifactId>
+			<version>0.5</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.3</version>
+		</dependency>
+
+
 		<!-- TEST Dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -53,9 +75,10 @@
 		</dependency>
 	</dependencies>
 	<modules>
+		<module>rulebase-ws-server</module>
 		<module>loanbroker-endpoint</module>
-		<module>loanbroker-enricher-bank</module>
 		<module>loanbroker-enricher-credit</module>
+		<module>loanbroker-enricher-bank</module>
 		<module>loanbroker-receiver</module>
 	</modules>
 </project>

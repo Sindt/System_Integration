@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
+encoding//src/main/java/rulebase/boundary/RuleBaseWS.java=UTF-8
+encoding//src/main/java/rulebase/boundary/RuleBaseWSPortBindingStub.java=UTF-8
+encoding//src/main/java/rulebase/boundary/RuleBaseWSService.java=UTF-8
+encoding//src/main/java/rulebase/boundary/RuleBaseWSServiceLocator.java=UTF-8
 encoding//src/main/resources=UTF-8
 encoding//src/test/java=UTF-8
 encoding//src/test/resources=UTF-8

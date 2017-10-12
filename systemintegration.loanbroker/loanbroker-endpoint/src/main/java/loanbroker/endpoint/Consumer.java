@@ -30,9 +30,15 @@ public class Consumer extends EndPoint implements Runnable {
 	@Override
 	public void run() {
 		try {
-			channel.basicConsume(endPointName, autoAck, consumerTag, handler(channel));			
-			while (true) {
-				Thread.sleep(500);
+			synchronized (this) {
+				channel.basicConsume(endPointName, autoAck, consumerTag, handler(channel));
+				while (true) {
+					if (message != null) {
+						System.out.println("Notify!");
+						notify();
+					}
+					wait(1000);
+				}
 			}
 
 		} catch (Exception e) {
@@ -47,14 +53,15 @@ public class Consumer extends EndPoint implements Runnable {
 			public void handleDelivery(String consumerTag, Envelope envelope, BasicProperties properties, byte[] body)
 					throws IOException {
 				message = body;
+				System.out.println(body.toString());
+				if (!autoAck) {
+					channel.basicAck(envelope.getDeliveryTag(), false);
+				}
+				while (true) {
+					if (message == null) {
+						System.out.println("ready for new");
+						break;
 
-				while (message != null) {
-					try {
-						if (!autoAck) {
-							channel.basicAck(envelope.getDeliveryTag(), false);
-						}
-						Thread.sleep(500);
-					} catch (InterruptedException e) {
 					}
 				}
 

@@ -15,7 +15,6 @@ public class CreditClient {
 		} catch (Exception e) {
 		}
 		return 0;
-
 	}
 
 }
