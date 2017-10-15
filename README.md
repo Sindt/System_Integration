@@ -3,18 +3,14 @@
 
 Projektet er meget nemt at demo. Nedenfor er en kort vejledning i de forskellige steps:
 1. Clone projektet
-2. Kør build_deploy.sh
-3. Kør loanbroker.jar
+2. Kør build_deploy.sh -Vent til det er færdigt (Der skal stå "#badassmicrofish (build) ready in...")
+3. Kør start_consumers.sh
 
 <p>Projektet er nu kørende lokalt på en Payara Micro server. Alle moduler er blevet deployet, og web-serveren kan findes på "http://localhost:8080"</p>
 
-**For at stoppe serveren igen, findes Java Platform SE Binary, under windows processer, og jobbet afsluttes.** 
+**For at stoppe serveren igen, lukkes build_deploy vinduet (ctrl-c) og jobbet afsluttes.** 
 
 #### REST-API
-Projektet har et rest api som kan findes her:
-<br>
-http://localhost:8080/loanbroker-receiver/api/quote
-
 Ønsker man at POST'e en ny besked til Api'et kan det gøres via f.eks. Postman:
 <br>
 http://localhost:8080/loanbroker-receiver/api/quote/send/?ssn=101190-2277&amount=120000&duration=5
@@ -28,8 +24,11 @@ http://datdb.cphbusiness.dk:15672/#/queues/%2F/kkc-receiver
 <br>
 http://datdb.cphbusiness.dk:15672/#/queues/%2F/kkc-enricher-credit
 <br>
-<p>Denne kø som bliver brugt af loanbroker.enricher til at hente sende de berigede beskeder videre.</p>
-
+<p>Denne kø som bliver brugt af loanbroker.enricher.credit, til at sende de berigede beskeder videre til.</p>
+<br>
+http://datdb.cphbusiness.dk:15672/#/queues/%2F/kkc-enricher-bank
+<br>
+<p>Denne kø som bliver brugt af loanbroker.enricher.bank til at sende de berigede beskeder videre til.</p>
 
 
 #### Yderligere beskrivelse af setup kommer...
