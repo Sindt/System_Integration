@@ -21,28 +21,24 @@ public class CreditService {
 		}
 	}
 
-	public boolean enrichMessage(byte[] messagebytes) {
+	public JSONObject enrichMessage(byte[] messagebytes) {
 		JSONObject message = transformBytesToJson(messagebytes);
-		System.out.println(message);
 		if (message != null) {
-			int creditScore;
+			// Hvis clienten ikke svare, så sæt CS til 1
+			int creditScore = 1;
 			try {
 				creditScore = client.getCreditScore(message);
-				System.out.println(creditScore);
 			} catch (Exception e) {
 				e.printStackTrace();
-				// Hvis clienten ikke svare, så sæt CS til 1
-				creditScore = 1;
 			}
-
 			message.put("creditScore", creditScore);
 			try {
 				producer.sendMessageBasic(message.toString().getBytes());
-				return true;
 			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
-		return false;
+		return message;
 	}
 
 	public JSONObject transformBytesToJson(byte[] body) {

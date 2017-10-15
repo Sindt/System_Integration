@@ -12,7 +12,6 @@ public class RuleBaseWS {
 	private final String smsBankLowRate = "smsBankLowRate";
 	private final String jsonBank = "jsonBank";
 	private final String xmlBank = "xmlBank";
-	private List<String> banks = new ArrayList<>();
 
 	/*
 	 * RULES : Amount: XML, JSON : Min 25.000 SMS : MAX 50.000
@@ -30,7 +29,7 @@ public class RuleBaseWS {
 	 * 
 	 */
 	public List<String> getBanks(int loanAmount, int loanDuration, int creditScore) {
-
+		List<String> banks = new ArrayList<>();
 		if (creditScore < 101) {
 			banks.add(smsBankHighRate);
 		} else if (creditScore < 401) {

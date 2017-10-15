@@ -55,6 +55,7 @@
 								<argument>${basedir}/target/${project.artifactId}.war</argument>
 								<argument>--outputUberJar</argument>
 								<argument>${project.parent.basedir}/${project.parent.artifactId}.jar</argument>
+								<argument>--toLogFile</argument>
 							</arguments>
 							<includeProjectDependencies>true</includeProjectDependencies>
 							<includePluginDependencies>true</includePluginDependencies>

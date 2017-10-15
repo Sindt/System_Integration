@@ -30,17 +30,19 @@ public class Consumer extends EndPoint implements Runnable {
 	@Override
 	public void run() {
 		try {
-			synchronized (this) {
-				channel.basicConsume(endPointName, autoAck, consumerTag, handler(channel));
-				while (true) {
-					if (message != null) {
-						System.out.println("Notify!");
-						notify();
+			while (true) {
+				synchronized (this) {
+					channel.basicConsume(endPointName, autoAck, consumerTag, handler(channel));
+					System.out.println("Waiting consumer..");
+					while (true) {
+						if (message != null) {
+							System.out.println("Notify!");
+							notify();
+						}
+						wait(500);
 					}
-					wait(1000);
 				}
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -52,19 +54,13 @@ public class Consumer extends EndPoint implements Runnable {
 			@Override
 			public void handleDelivery(String consumerTag, Envelope envelope, BasicProperties properties, byte[] body)
 					throws IOException {
-				message = body;
-				System.out.println(body.toString());
-				if (!autoAck) {
-					channel.basicAck(envelope.getDeliveryTag(), false);
-				}
-				while (true) {
-					if (message == null) {
-						System.out.println("ready for new");
-						break;
-
+				synchronized (this) {
+					message = body;
+					System.out.println(body.toString());
+					if (!autoAck) {
+						channel.basicAck(envelope.getDeliveryTag(), false);
 					}
 				}
-
 			}
 		};
 	}

@@ -75,10 +75,10 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>rulebase-ws-server</module>
-		<module>loanbroker-endpoint</module>
 		<module>loanbroker-enricher-credit</module>
 		<module>loanbroker-enricher-bank</module>
+		<module>rulebase-ws-server</module>
+		<module>loanbroker-endpoint</module>
 		<module>loanbroker-receiver</module>
 	</modules>
 </project>

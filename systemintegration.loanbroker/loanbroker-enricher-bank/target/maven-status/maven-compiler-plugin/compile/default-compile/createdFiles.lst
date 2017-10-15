@@ -3,6 +3,8 @@ rulebase\boundary\RuleBaseWSProxy.class
 rulebase\boundary\RuleBaseWSService.class
 loanbroker\enricher\bank\boundary\MessageReceiver.class
 rulebase\boundary\RuleBaseWSServiceLocator.class
+loanbroker\enricher\bank\JAXRSConfig.class
 loanbroker\enricher\bank\controller\BankService.class
 rulebase\boundary\RuleBaseWS.class
 rulebase\boundary\RuleBaseWSPortBindingStub.class
+loanbroker\enricher\bank\boundary\BankStarter.class

@@ -1,7 +1,5 @@
 package loanbroker.enricher.bank.controller;
 
-import java.util.List;
-
 import org.json.JSONObject;
 
 import loanbroker.endpoint.Producer;
@@ -23,24 +21,19 @@ public class BankService {
 		}
 	}
 
-	public boolean enrichMessage(byte[] messagebytes) {
+	public JSONObject enrichMessage(byte[] messagebytes) {
+
 		JSONObject message = transformBytesToJson(messagebytes);
 		if (message != null) {
 			String[] banks = client.getBanks(message);
 			try {
 				message.put("banks", banks);
 				producer.sendMessageBasic(message.toString().getBytes());
-				return true;
 			} catch (Exception e) {
-			} finally {
-				try {
-					producer.close();
-				} catch (Exception e) {
-				}
+				e.printStackTrace();
 			}
 		}
-		return false;
-
+		return message;
 	}
 
 	public JSONObject transformBytesToJson(byte[] body) {
