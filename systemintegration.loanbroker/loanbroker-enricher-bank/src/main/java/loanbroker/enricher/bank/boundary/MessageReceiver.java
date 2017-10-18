@@ -1,14 +1,11 @@
 package loanbroker.enricher.bank.boundary;
 
-import javax.ejb.Stateless;
-
 import loanbroker.endpoint.Consumer;
 import loanbroker.enricher.bank.controller.BankService;
 
-@Stateless
 public class MessageReceiver {
 
-	private static final String EXCHANGE_NAME = "kkc-enricher-creditscore";
+	private static final String EXCHANGE_NAME = "kkc-enricher-credit";
 	private static final String CONSUMER_TAG = "Bank";
 
 	private BankService service = new BankService();
@@ -22,7 +19,7 @@ public class MessageReceiver {
 			while (true) {
 				synchronized (consumer) {
 					try {
-						System.out.println("waiting..");
+						System.out.println(CONSUMER_TAG + " waiting..");
 						consumer.wait();
 						byte[] message = consumer.getMessage();
 						System.out.println(message);

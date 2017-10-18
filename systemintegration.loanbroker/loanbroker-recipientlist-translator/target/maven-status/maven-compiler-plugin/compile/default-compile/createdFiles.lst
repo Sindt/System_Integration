@@ -1,0 +1,4 @@
+loanbroker\recipientlist\translator\boundary\MessageReceiver.class
+loanbroker\recipientlist\translator\boundary\RcptStarter.class
+loanbroker\recipientlist\translator\controller\RecipientListService.class
+loanbroker\recipientlist\translator\JAXRSConfig.class

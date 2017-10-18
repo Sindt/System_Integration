@@ -7,7 +7,7 @@ import loanbroker.enricher.credit.client.CreditClient;
 
 public class CreditService {
 
-	private static final String EXCHANGE_NAME = "kkc-enricher-creditscore";
+	private static final String EXCHANGE_NAME = "kkc-enricher-credit";
 
 	private CreditClient client;
 	private Producer producer;

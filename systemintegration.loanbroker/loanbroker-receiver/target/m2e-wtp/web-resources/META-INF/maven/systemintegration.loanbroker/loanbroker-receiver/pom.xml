@@ -44,13 +44,20 @@
 							<mainClass>fish.payara.micro.PayaraMicro</mainClass>
 							<arguments>
 								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/rulebase-ws-server/target/rulebase-ws-server-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
 								<argument>${project.parent.basedir}/loanbroker-endpoint/target/loanbroker-endpoint-0.0.1-SNAPSHOT.war</argument>
 								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-enricher-bank/target/loanbroker-enricher-bank-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
 								<argument>${project.parent.basedir}/loanbroker-enricher-credit/target/loanbroker-enricher-credit-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-recipientlist-translator/target/loanbroker-recipientlist-translator-0.0.1-SNAPSHOT.war</argument>
 								<argument>--deploy</argument>
 								<argument>${basedir}/target/${project.artifactId}.war</argument>
 								<argument>--outputUberJar</argument>
 								<argument>${project.parent.basedir}/${project.parent.artifactId}.jar</argument>
+								<argument>--toLogFile</argument>
 							</arguments>
 							<includeProjectDependencies>true</includeProjectDependencies>
 							<includePluginDependencies>true</includePluginDependencies>

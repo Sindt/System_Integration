@@ -1,6 +1,7 @@
 package loanbroker.endpoint;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 import com.rabbitmq.client.AMQP.BasicProperties;
 import com.rabbitmq.client.Channel;
@@ -13,8 +14,8 @@ public class Consumer extends EndPoint implements Runnable {
 	private byte[] message;
 	private boolean autoAck = true;
 
-	public Consumer(String endpointName, String consumerTag, boolean autoAck) throws IOException {
-		super(endpointName);
+	public Consumer(String endPointName, String consumerTag, boolean autoAck) throws IOException, TimeoutException {
+		super(endPointName);
 		this.consumerTag = consumerTag;
 		this.autoAck = autoAck;
 	}

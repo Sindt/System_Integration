@@ -11,13 +11,13 @@ import javax.ws.rs.core.Response.Status;
 
 import org.json.JSONObject;
 
-import loanbroker.receiver.controller.QouteRequestController;
+import loanbroker.receiver.controller.QuoteRequestService;
 
 @Path("quote")
 @Produces(MediaType.APPLICATION_JSON)
 public class QuoteRequestResource {
 
-	private QouteRequestController controller = new QouteRequestController();
+	private QuoteRequestService controller = new QuoteRequestService();
 
 	@GET
 	public Response getRunning() {

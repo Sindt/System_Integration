@@ -79,6 +79,7 @@
 		<module>loanbroker-enricher-bank</module>
 		<module>rulebase-ws-server</module>
 		<module>loanbroker-endpoint</module>
+		<module>loanbroker-recipientlist-translator</module>
 		<module>loanbroker-receiver</module>
 	</modules>
 </project>

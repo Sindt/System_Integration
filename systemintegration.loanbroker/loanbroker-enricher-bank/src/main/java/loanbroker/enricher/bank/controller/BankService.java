@@ -25,8 +25,8 @@ public class BankService {
 
 		JSONObject message = transformBytesToJson(messagebytes);
 		if (message != null) {
-			String[] banks = client.getBanks(message);
 			try {
+				String[] banks = client.getBanks(message);
 				message.put("banks", banks);
 				producer.sendMessageBasic(message.toString().getBytes());
 			} catch (Exception e) {
@@ -40,6 +40,7 @@ public class BankService {
 		try {
 			return new JSONObject(new String(body));
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return null;
 

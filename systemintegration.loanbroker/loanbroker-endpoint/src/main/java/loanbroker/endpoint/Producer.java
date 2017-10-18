@@ -1,10 +1,11 @@
 package loanbroker.endpoint;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 public class Producer extends EndPoint {
 
-	public Producer(String endpointName) throws IOException {
+	public Producer(String endpointName) throws IOException, TimeoutException {
 		super(endpointName);
 	}
 

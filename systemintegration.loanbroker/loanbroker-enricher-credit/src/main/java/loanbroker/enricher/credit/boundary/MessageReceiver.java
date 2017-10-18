@@ -19,7 +19,7 @@ public class MessageReceiver {
 			while (true) {
 				synchronized (consumer) {
 					try {
-						System.out.println("waiting..");
+						System.out.println(CONSUMER_TAG + " waiting..");
 						consumer.wait();
 						byte[] message = consumer.getMessage();
 						System.out.println(message);

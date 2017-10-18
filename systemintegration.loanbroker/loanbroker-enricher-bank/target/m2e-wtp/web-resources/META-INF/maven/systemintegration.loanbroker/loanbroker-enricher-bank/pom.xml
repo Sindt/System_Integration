@@ -7,7 +7,6 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>loanbroker-enricher-bank</artifactId>
-	<packaging>war</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>systemintegration.loanbroker</groupId>
@@ -16,14 +15,11 @@
 			<classifier>classes</classifier>
 			<scope>compile</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
 		<dependency>
 			<groupId>org.apache.axis</groupId>
 			<artifactId>axis</artifactId>
 			<version>1.4</version>
 		</dependency>
-
 	</dependencies>
-
+	<packaging>war</packaging>
 </project>

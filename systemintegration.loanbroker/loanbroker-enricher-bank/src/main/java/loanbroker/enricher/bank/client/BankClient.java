@@ -18,9 +18,10 @@ public class BankClient {
 			RuleBaseWS stub = locator.getRuleBaseWSPort();
 			bankList = stub.getBanks(loanAmount, loanDuration, creditScore);
 		} catch (Exception e) {
-			// TODO: handle exception
+			bankList = new String[0];
 		}
-		return bankList;
+		return (bankList == null) ? new String[0] : bankList;
+
 	}
 
 }
