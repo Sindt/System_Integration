@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/java/smsbank/lowrate/boundary/LoanResponse.java=UTF-8
+encoding//src/main/java/smsbank/lowrate/boundary/SmsBankLowRateWS.java=UTF-8
+encoding//src/main/java/smsbank/lowrate/boundary/SmsBankLowRateWSPortBindingStub.java=UTF-8
+encoding//src/main/java/smsbank/lowrate/boundary/SmsBankLowRateWSService.java=UTF-8
+encoding//src/main/java/smsbank/lowrate/boundary/SmsBankLowRateWSServiceLocator.java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8

@@ -46,6 +46,8 @@
 								<argument>--deploy</argument>
 								<argument>${project.parent.basedir}/rulebase-ws-server/target/rulebase-ws-server-0.0.1-SNAPSHOT.war</argument>
 								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/smsbank-lowrate-ws-server/target/smsbank-lowrate-ws-server-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
 								<argument>${project.parent.basedir}/loanbroker-endpoint/target/loanbroker-endpoint-0.0.1-SNAPSHOT.war</argument>
 								<argument>--deploy</argument>
 								<argument>${project.parent.basedir}/loanbroker-enricher-bank/target/loanbroker-enricher-bank-0.0.1-SNAPSHOT.war</argument>

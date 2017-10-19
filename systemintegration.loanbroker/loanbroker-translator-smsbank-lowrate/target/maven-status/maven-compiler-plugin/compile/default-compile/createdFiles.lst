@@ -1,0 +1,8 @@
+loanbroker\translator\smsbank\boundary\MessageReceiver.class
+smsbank\lowrate\boundary\SmsBankLowRateWSService.class
+loanbroker\translator\smsbank\client\SmsBankClient.class
+smsbank\lowrate\boundary\SmsBankLowRateWSPortBindingStub.class
+smsbank\lowrate\boundary\SmsBankLowRateWSProxy.class
+smsbank\lowrate\boundary\SmsBankLowRateWS.class
+smsbank\lowrate\boundary\SmsBankLowRateWSServiceLocator.class
+smsbank\lowrate\boundary\LoanResponse.class
