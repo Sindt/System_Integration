@@ -35,7 +35,7 @@
               <columnNumber>15</columnNumber>
               <source>
                 <modelId>systemintegration.loanbroker:loanbroker:0.0.1-SNAPSHOT</modelId>
-                <location>C:\Users\Sindt\eclipse\systemintegration.loanbroker\pom.xml</location>
+                <location>C:\Users\Sindt\Git\System_Integration\systemintegration.loanbroker\pom.xml</location>
               </source>
             </org.apache.maven.model.InputLocation>
           </entry>
