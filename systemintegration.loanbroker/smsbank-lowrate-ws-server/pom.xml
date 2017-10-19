@@ -7,4 +7,14 @@
   </parent>
   <artifactId>smsbank-lowrate-ws-server</artifactId>
   <packaging>war</packaging>
+  
+   <dependencies>
+		<dependency>
+			<groupId>systemintegration.loanbroker</groupId>
+			<artifactId>loanbroker-endpoint</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<classifier>classes</classifier>
+			<scope>compile</scope>
+		</dependency>
+		</dependencies>
 </project>

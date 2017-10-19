@@ -1,8 +1,10 @@
+C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\loanbroker\translator\smsbank\boundary\BankStarter.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\loanbroker\translator\smsbank\boundary\MessageReceiver.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\smsbank\lowrate\boundary\SmsBankLowRateWSService.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\smsbank\lowrate\boundary\SmsBankLowRateWSServiceLocator.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\smsbank\lowrate\boundary\SmsBankLowRateWS.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\smsbank\lowrate\boundary\SmsBankLowRateWSProxy.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\loanbroker\translator\smsbank\client\SmsBankClient.java
+C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\loanbroker\translator\smsbank\JAXRSConfig.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\smsbank\lowrate\boundary\LoanResponse.java
 C:\Users\Sindt\eclipse\systemintegration.loanbroker\loanbroker-translator-smsbank-lowrate\src\main\java\smsbank\lowrate\boundary\SmsBankLowRateWSPortBindingStub.java

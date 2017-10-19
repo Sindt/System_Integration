@@ -6,17 +6,19 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
+import smsbank.lowrate.entity.LoanResponse;
+
 public class SmsBankLowRateWSTest {
 
 	SmsBankLowRateWS bank = new SmsBankLowRateWS();
 
 	@Test
-	public void testGetInterestRate() {
+	public void test() {
 		int loanDuration = 10;
 		int loanAmount = 45000;
-		double result = bank.getInterestRate(loanDuration, 800, loanAmount);
-		double expected = 9.465094947931416;
-		assertThat(result, is(equalTo(expected)));
+		String ssn = "112233-4455";
+		LoanResponse result = bank.loanRequest(loanDuration, 123, loanAmount, ssn);
+		assertThat(result.getSsn(), is(equalTo(ssn)));
 	}
 
 }

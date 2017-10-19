@@ -9,5 +9,4 @@ package smsbank.lowrate.boundary;
 
 public interface SmsBankLowRateWS extends java.rmi.Remote {
     public smsbank.lowrate.boundary.LoanResponse loanRequest(int arg0, int arg1, int arg2, java.lang.String arg3) throws java.rmi.RemoteException;
-    public double getInterestRate(int arg0, int arg1, int arg2) throws java.rmi.RemoteException;
 }

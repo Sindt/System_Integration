@@ -81,8 +81,6 @@
 		<module>loanbroker-recipientlist-translator</module>
 		<module>rulebase-ws-server</module>
 		<module>smsbank-lowrate-ws-server</module>
-		<module>loanbroker-receiver</module>
-
 		<module>loanbroker-translator-smsbank-lowrate</module>
 		<module>loanbroker-translator-smsbank-highrate</module>
 		<module>loanbroker-translator-xmlbank</module>
@@ -92,5 +90,6 @@
 		<module>loanbroker-normalizer-smsbank-highrate</module>
 		<module>loanbroker-normalizer-xmlbank</module>
 		<module>loanbroker-normalizer-jsonbank</module>
+		<module>loanbroker-receiver</module>
 	</modules>
 </project>

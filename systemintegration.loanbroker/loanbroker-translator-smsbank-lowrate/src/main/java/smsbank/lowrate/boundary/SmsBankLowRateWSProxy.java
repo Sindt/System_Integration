@@ -50,11 +50,5 @@ public class SmsBankLowRateWSProxy implements smsbank.lowrate.boundary.SmsBankLo
     return smsBankLowRateWS.loanRequest(arg0, arg1, arg2, arg3);
   }
   
-  public double getInterestRate(int arg0, int arg1, int arg2) throws java.rmi.RemoteException{
-    if (smsBankLowRateWS == null)
-      _initSmsBankLowRateWSProxy();
-    return smsBankLowRateWS.getInterestRate(arg0, arg1, arg2);
-  }
-  
   
 }

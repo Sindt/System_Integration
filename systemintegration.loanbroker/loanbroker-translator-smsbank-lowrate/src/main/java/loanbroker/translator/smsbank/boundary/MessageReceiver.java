@@ -1,13 +1,15 @@
 package loanbroker.translator.smsbank.boundary;
 
 import loanbroker.endpoint.Consumer;
+import loanbroker.translator.smsbank.client.SmsBankClient;
 
 public class MessageReceiver {
 
 	private static final String EXCHANGE_NAME = "kkc-Translator-smsBankLowRate";
-	private static final String CONSUMER_TAG = "Bank";
+	private static final String CONSUMER_TAG = "smsBankLowRate";
 
 	private Consumer consumer;
+	private SmsBankClient client = new SmsBankClient();
 
 	public void onMessage() {
 		try {
@@ -20,7 +22,7 @@ public class MessageReceiver {
 						System.out.println(CONSUMER_TAG + " waiting..");
 						consumer.wait();
 						byte[] message = consumer.getMessage();
-						System.out.println(message);
+						client.sendRequestToBank(message);
 						consumer.setMessage(null);
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -31,5 +33,5 @@ public class MessageReceiver {
 			e.printStackTrace();
 		}
 	}
-	
+
 }

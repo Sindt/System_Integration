@@ -3,6 +3,8 @@ smsbank\lowrate\boundary\SmsBankLowRateWSService.class
 loanbroker\translator\smsbank\client\SmsBankClient.class
 smsbank\lowrate\boundary\SmsBankLowRateWSPortBindingStub.class
 smsbank\lowrate\boundary\SmsBankLowRateWSProxy.class
+loanbroker\translator\smsbank\boundary\BankStarter.class
 smsbank\lowrate\boundary\SmsBankLowRateWS.class
 smsbank\lowrate\boundary\SmsBankLowRateWSServiceLocator.class
+loanbroker\translator\smsbank\JAXRSConfig.class
 smsbank\lowrate\boundary\LoanResponse.class

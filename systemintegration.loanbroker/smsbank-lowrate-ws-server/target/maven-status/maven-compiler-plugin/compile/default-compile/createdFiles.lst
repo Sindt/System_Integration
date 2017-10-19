@@ -1,3 +1,4 @@
-smsbank\lowrate\entity\LoanResponse.class
 smsbank\lowrate\boundary\SmsBankLowRateWS.class
 smsbank\lowrate\boundary\Exporter.class
+smsbank\lowrate\controller\SmsBankService.class
+smsbank\lowrate\entity\LoanResponse.class

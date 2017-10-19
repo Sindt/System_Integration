@@ -56,6 +56,24 @@
 								<argument>--deploy</argument>
 								<argument>${project.parent.basedir}/loanbroker-recipientlist-translator/target/loanbroker-recipientlist-translator-0.0.1-SNAPSHOT.war</argument>
 								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-aggregator/target/loanbroker-aggregator-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-normalizer-jsonbank/target/loanbroker-normalizer-jsonbank-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-normalizer-smsbank-highrate/target/loanbroker-normalizer-smsbank-highrate-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-normalizer-smsbank-lowrate/target/loanbroker-normalizer-smsbank-lowrate-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-normalizer-xmlbank/target/loanbroker-normalizer-xmlbank-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-translator-jsonbank/target/loanbroker-translator-jsonbank-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-translator-smsbank-highrate/target/loanbroker-translator-smsbank-highrate-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-translator-smsbank-lowrate/target/loanbroker-translator-smsbank-lowrate-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
+								<argument>${project.parent.basedir}/loanbroker-translator-xmlbank/target/loanbroker-translator-xmlbank-0.0.1-SNAPSHOT.war</argument>
+								<argument>--deploy</argument>
 								<argument>${basedir}/target/${project.artifactId}.war</argument>
 								<argument>--outputUberJar</argument>
 								<argument>${project.parent.basedir}/${project.parent.artifactId}.jar</argument>
