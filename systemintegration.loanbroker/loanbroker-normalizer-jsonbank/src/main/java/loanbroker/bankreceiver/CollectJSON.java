@@ -5,9 +5,14 @@
  */
 package loanbroker.bankreceiver;
 
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeoutException;
 
 /**
  *
@@ -15,9 +20,23 @@ import java.util.Date;
  */
 public class CollectJSON {
 
-    public void send(String jsonString) {
+    String QUEUE_NAME = "kkc-agg-jsonbank";
+
+    public void send(String message) throws IOException, TimeoutException {
         DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
         Date time = new Date();
-        System.out.println(df.format(time) + " Received: " + jsonString);
+        System.out.println(df.format(time) + " Received: " + message);
+
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("datdb.cphbusiness.dk");
+        try (Connection connection = factory.newConnection()) {
+            Channel channel = connection.createChannel();
+            
+            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+            channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+            System.out.println(" [x] Sent '" + message + "'");
+            
+            channel.close();
+        }
     }
 }

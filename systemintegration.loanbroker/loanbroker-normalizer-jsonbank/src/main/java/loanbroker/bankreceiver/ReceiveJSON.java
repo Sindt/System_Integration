@@ -47,7 +47,11 @@ public class ReceiveJSON implements Runnable {
                     String message = new String(body, "UTF-8");
                     System.out.println(" [x] Received '" + message + "'");
                     CollectJSON cj = new CollectJSON();
-                    cj.send(message);
+                    try {
+                        cj.send(message);
+                    } catch (TimeoutException ex) {
+                        Logger.getLogger(ReceiveJSON.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             };
             channel.basicConsume(queueName, true, consumer);
