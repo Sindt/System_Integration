@@ -1,10 +1,10 @@
 package org.loanbroker.aggregator;
 
-public class LoanResponse {
+public class LoanResult {
 	String ssn, bank;
 	double interestRate;
 
-	public LoanResponse(String ssn, String bank, double interestRate) {
+	public LoanResult(String ssn, String bank, double interestRate) {
 		this.ssn = ssn;
 		this.bank = bank;
 		this.interestRate = interestRate;
@@ -19,10 +19,10 @@ public class LoanResponse {
 	}
 
 	public double getInterestRate() {
-		return interest_rate;
+		return interestRate;
 	}
 
-	public void setInterestRate(double interest_rate) {
+	public void setInterestRate(double interest_rate) {	
 		this.interestRate = interestRate;
 	}
 
