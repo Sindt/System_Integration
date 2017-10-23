@@ -50,7 +50,11 @@ public class ReceiveXML implements Runnable {
                     System.out.println(" [x] Received '" + message + "'");
                     CollectJSON cj = new CollectJSON();
                     JSONObject xmlJSONObj = XML.toJSONObject(message);
-                    cj.send(xmlJSONObj.toString());
+                    try {
+                        cj.send(xmlJSONObj.toString());
+                    } catch (TimeoutException ex) {
+                        Logger.getLogger(ReceiveXML.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             };
             channel.basicConsume(queueName, true, consumer);
