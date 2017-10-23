@@ -91,5 +91,6 @@
 		<module>loanbroker-normalizer-xmlbank</module>
 		<module>loanbroker-normalizer-jsonbank</module>
 		<module>loanbroker-receiver</module>
+                <module>loanbroker-frontend</module>
 	</modules>
 </project>
