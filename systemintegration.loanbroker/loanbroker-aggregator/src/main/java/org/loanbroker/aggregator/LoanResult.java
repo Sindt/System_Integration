@@ -18,12 +18,12 @@ public class LoanResponse {
 		this.ssn = ssn;
 	}
 
-	public double getInterest_rate() {
+	public double getInterestRate() {
 		return interest_rate;
 	}
 
-	public void setInterest_rate(double interest_rate) {
-		this.interest_rate = interest_rate;
+	public void setInterestRate(double interest_rate) {
+		this.interestRate = interestRate;
 	}
 
 	public String getBank() {
