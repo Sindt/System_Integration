@@ -34,7 +34,7 @@ public class SmsBankLowRateWSPortBindingStub extends org.apache.axis.client.Stub
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg3"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://boundary.lowrate.smsbank/", "loanResponse"));
+        oper.setReturnType(new javax.xml.namespace.QName("http://boundary.highrate.smsbank/", "loanResponse"));
         oper.setReturnClass(smsbank.lowrate.boundary.LoanResponse.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);

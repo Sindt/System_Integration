@@ -29,7 +29,7 @@ public class SmsBankLowRateWSServiceLocator extends org.apache.axis.client.Servi
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String SmsBankLowRateWSPortWSDDServiceName = "SmsBankLowRateWSPort";
+    private java.lang.String SmsBankLowRateWSPortWSDDServiceName = "SmsBankHighRateWSPort";
 
     public java.lang.String getSmsBankLowRateWSPortWSDDServiceName() {
         return SmsBankLowRateWSPortWSDDServiceName;
